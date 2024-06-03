@@ -13,11 +13,11 @@ app.use(express.json());
 const db = mysql.createConnection(
   {
     host: "localhost",
+    database: process.env.DB_DATABASE,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: "employees_db",
   },
-  console.log(`You are connected to the classlist_db database.`)
+  console.log(`You are connected to the employee_db database.`)
 );
 
 function viewDepartments() {
